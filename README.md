@@ -9,6 +9,7 @@
 
 ## Features
 
+- [x] Click on nav items to scroll content area
 - [x] ...
 
 # Deployment
@@ -19,34 +20,32 @@
 
 To install this theme manually you need to:
 
-1. Clone the repository
-2. Install the dependencies
-
-To clone the repository simply run:
+1. Clone this repository by simply run:
 
 ```bash
 git clone https://github.com/ionos-deploy-now/gridsome-starter-scroll
 ```
 
-After cloning the project, change to the project you just created.
+1. Install dependencies
+
+Change your dir:
 
 ```bash
 cd gridsome-starter-scroll
 ```
 
-Now you only need to install the dependencies.
+Now, install all project dependencies using `yarn`:
 
-Using yarn
 ```bash
 yarn install
 ```
 
-After all dependencies are installed you can run `yarn develop` to start the development server!
+After all dependencies are installed you can run `yarn develop` to start the development server.
 
-## Configuring Environmental Variables
+## Configuring environmental variables
 
-This boilerplate helps to configure important data using `.env`. All you need to do is just copy `.env.example` to `.env`
-and fill the data for following variables
+You can easily individualize this template by setting your own environmental variables. Just rename `.env.example` to `.env`
+and fill out the data for following variables:
 
 ```dotenv
 SITE_NAME=
@@ -54,5 +53,6 @@ SITE_DESCRIPTION=
 SITE_AUTHOR=
 ```
 
-## More Configuration
+## More configuration settings
+
 You can edit other configuration values inside `gridsome.config.js`
