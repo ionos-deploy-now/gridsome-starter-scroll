@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap');
+
+/**
+ * Colors & Variables
+ */
+
+:root {
+  // palette
+  --color-primary: #0b9dcc;
+  --color-secondary: #2c3e50;
+}
+
+html.dark {
+  // tbd
+}
+
+/**
+ * General
+ */
+
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  @apply text-light-300
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply text-light-300
+}
+
+h1 {
+  @apply tracking-0;
+  font-size: 42px;
+  line-height: 52px;
+}
+
+h2 {
+  @apply tracking-0;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+h3 {
+  @apply font-normal tracking-0.5px;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+h4 {
+  @apply text-lg;
+}
+
+p,
+ol,
+ul,
+pre,
+strong,
+blockquote {
+  @apply mt-4 tracking-normal;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.absolute-center-x {
+  @apply left-1/2;
+  transform: translateX(-50%);
+}
+
+.absolute-center-y {
+  @apply top-1/2;
+  transform: translateY(-50%);
+}
+
+.absolute-center {
+  @apply absolute-center-x absolute-center-y;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-fit {
+  @apply absolute top-0 left-0 right-0 bottom-0;
+}
+
+/**
+ * Components
+ */
+
+.container {
+  @apply py-8 md:py-20;
+}
+
+
+.icon:not(.icon-link) {
+  @apply leading-1 mx-1 outline-none;
+}
+
+.material-design-icon {
+  height: 1.25em;
+  width: 1.25em;
+
+  & > .material-design-icon__svg {
+    height: 1.25em;
+    width: 1.25em;
+  }
+
+  &.icon > .material-design-icon__svg {
+    height: 2em;
+    width: 2em;
+  }
+
+  &.icon-md > .material-design-icon__svg {
+    height: 3em;
+    width: 3em;
+  }
+
+  &.icon-lg > .material-design-icon__svg {
+    height: 4em;
+    width: 4em;
+  }
+}
+
+.bg-image {
+  @apply relative z-0;
+
+  &::before {
+    @apply z-0;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/WLUHO9A_xik');
+    opacity: 1;
+    pointer-events: none;
+  }
+}

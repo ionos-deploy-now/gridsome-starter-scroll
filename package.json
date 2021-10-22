@@ -1,0 +1,30 @@
+{
+  "name": "hunsalz.de",
+  "version": "0.0.1",
+  "description": "Portfolio page",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunsalz/hunsalz.de.git"
+  },
+  "author": {
+    "name": "Markus Hunsalz"
+  },
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.23",
+    "vue-material-design-icons": "^4.13.0",
+    "vue-scrollactive": "^0.9.3"
+  },
+  "devDependencies": {
+    "@gridsome/plugin-sitemap": "^0.4.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "gridsome-plugin-windicss": "^1.0.4",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.1.1"
+  }
+}
