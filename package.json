@@ -1,10 +1,10 @@
 {
-  "name": "hunsalz.de",
+  "name": "gridsome-starter-scroll",
   "version": "0.0.1",
-  "description": "Portfolio page",
+  "description": "Gridsome starter",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hunsalz/hunsalz.de.git"
+    "url": "git+https://github.com/ionos-deploy-now/gridsome-starter-scroll.git"
   },
   "author": {
     "name": "Markus Hunsalz"
@@ -12,7 +12,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lint": "eslint --ext .ts,.js,.vue src"
   },
   "dependencies": {
     "gridsome": "^0.7.23",
