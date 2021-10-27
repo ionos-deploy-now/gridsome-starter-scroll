@@ -1,7 +1,7 @@
 <template>
   <aside class="flex space-x-4 justify-center items-center mx-auto my-4">
     <a
-      href="https://github.com/octocat"
+      :href="$static.metadata.github"
       class="p-2"
       target="_blank"
       rel="noopener noreferrer"
@@ -10,7 +10,7 @@
       <GithubIcon class="icon-md" />
     </a>
     <a
-      href="https://www.linkedin.com/in/john-doe"
+      :href="$static.metadata.linkedin"
       class="p-2"
       target="_blank"
       rel="noopener noreferrer"
@@ -24,7 +24,8 @@
 <static-query>
 query {
   metadata {
-    siteName
+    github
+    linkedin
   }
 }
 </static-query>

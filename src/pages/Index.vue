@@ -13,7 +13,7 @@
                     src="https://avataaars.io/?avatarStyle=Circle&topType=Hat&accessoriesType=Kurt&hatColor=Pink&facialHairType=BeardLight&facialHairColor=Brown&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=RaisedExcitedNatural&mouthType=Twinkle&skinColor=DarkBrown"
                   />
                   <h2 class="font-medium title-font mt-4 text-2xl">
-                    John Doe
+                    {{ $static.metadata.author }}
                   </h2>
                   <div class="w-24 h-1 bg-indigo-200 rounded mt-2 mb-4"></div>
                 </div>
@@ -154,7 +154,7 @@
                 aliquyam erat, sed diam voluptua.
               </p>
             </div>
-            <div class="flex flex-wrap">
+            <div class="flex-center flex-wrap">
               <div class="p-4 lg:w-1/4 md:w-1/2">
                 <div class="h-full flex flex-col items-center text-center">
                   <img
@@ -168,7 +168,7 @@
                         class="flex space-x-4 justify-center items-center mx-auto pb-4"
                       >
                         <a
-                          href="https://github.com/octocat"
+                          :href="$static.metadata.github"
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Github"
@@ -209,7 +209,7 @@
                         class="flex space-x-4 justify-center items-center mx-auto pb-4"
                       >
                         <a
-                          href="https://github.com/octocat"
+                          :href="$static.metadata.github"
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Github"
@@ -250,7 +250,7 @@
                         class="flex space-x-4 justify-center items-center mx-auto pb-4"
                       >
                         <a
-                          href="https://github.com/octocat"
+                          :href="$static.metadata.github"
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Github"
@@ -269,47 +269,6 @@
                     </div>
                     <h2 class="title-font font-medium text-lg">
                       Project III
-                    </h2>
-                    <p class="mb-4">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                      magna aliquyam erat, sed diam voluptua.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4 lg:w-1/4 md:w-1/2">
-                <div class="h-full flex flex-col items-center text-center">
-                  <img
-                    alt="team"
-                    class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                    src="https://dummyimage.com/200x200"
-                  />
-                  <div class="w-full">
-                    <div class="flex-center">
-                      <div
-                        class="flex space-x-4 justify-center items-center mx-auto pb-4"
-                      >
-                        <a
-                          href="https://github.com/octocat"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Github"
-                        >
-                          <GithubIcon class="icon" />
-                        </a>
-                        <a
-                          href="https://myoctocat.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Project IV"
-                        >
-                          <OpenInNewIcon class="icon" />
-                        </a>
-                      </div>
-                    </div>
-                    <h2 class="title-font font-medium text-lg">
-                      Project IV
                     </h2>
                     <p class="mb-4">
                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
@@ -393,7 +352,8 @@
 <static-query>
 query {
   metadata {
-    siteName
+    author
+    github
   }
 }
 </static-query>
