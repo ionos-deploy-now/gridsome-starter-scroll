@@ -7,7 +7,7 @@
       rel="noopener noreferrer"
       title="Github"
     >
-      <GithubIcon class="icon-md" />
+      <GithubIcon class="icon-lg" />
     </a>
     <a
       :href="$static.metadata.linkedin"
@@ -16,7 +16,7 @@
       rel="noopener noreferrer"
       title="Github"
     >
-      <LinkedinIcon class="icon-md" />
+      <LinkedinIcon class="icon-lg" />
     </a>
   </aside>
 </template>

@@ -1,17 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap");
 
 /**
  * Colors & Variables
  */
 
 :root {
-  // palette
-  --color-primary: #0b9dcc;
-  --color-secondary: #2c3e50;
+  --color-header-background: #1d98d3;
+  --color-header-color: #ffffff;
+  --color-header-highlight: #e0a625;
+  --color-content-color: #5bc0e8;
+  --color-content-highlight: #ffffff;
+  --color-scenery: #b4e4f5;
 }
 
 html.dark {
-  // tbd
+  --color-header-background: #00616e;
+  --color-header-color: #e3f3ff;
+  --color-header-highlight: #ef662e;
+  --color-content-color: #0f839a;
+  --color-content-highlight: #ffffff;
+  --color-scenery: #1897b3;
 }
 
 /**
@@ -22,14 +30,14 @@ html.dark {
   transition-property: color, background-color, border-color;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
-  @apply text-light-300
+  @apply text-light-300;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  @apply text-light-300
+  @apply text-light-300;
 }
 
 h1 {
@@ -60,7 +68,7 @@ ul,
 pre,
 strong,
 blockquote {
-  @apply mt-4 tracking-normal;
+  @apply tracking-normal;
 }
 
 .flex-center {
@@ -87,13 +95,19 @@ blockquote {
 }
 
 /**
- * Components
+ * components
  */
+
+.nav.is-fixed {
+  .is-active {
+    color: var(--color-header-highlight);
+    font-weight: bold;
+  }
+}
 
 .container {
   @apply py-8 md:py-20;
 }
-
 
 .icon:not(.icon-link) {
   @apply leading-1 mx-1 outline-none;
@@ -109,18 +123,18 @@ blockquote {
   }
 
   &.icon > .material-design-icon__svg {
+    height: 1em;
+    width: 1em;
+  }
+
+  &.icon-md > .material-design-icon__svg {
     height: 2em;
     width: 2em;
   }
 
-  &.icon-md > .material-design-icon__svg {
+  &.icon-lg > .material-design-icon__svg {
     height: 3em;
     width: 3em;
-  }
-
-  &.icon-lg > .material-design-icon__svg {
-    height: 4em;
-    width: 4em;
   }
 }
 
@@ -129,14 +143,14 @@ blockquote {
 
   &::before {
     @apply z-0;
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: url('https://source.unsplash.com/WLUHO9A_xik');
+    background: url("https://source.unsplash.com/WLUHO9A_xik");
     opacity: 1;
     pointer-events: none;
   }

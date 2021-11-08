@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <div>
-      <section id="about" class="h-screen bg-blue-gray-800">
-        <div class="container mx-auto h-full flex-center">
+      <section id="about" class="h-screen bg-content-color">
+        <div class="container mx-auto h-full flex-center border-b-4">
           <div class="flex flex-col">
             <div class="flex flex-col sm:flex-row mt-10">
               <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
@@ -12,10 +12,10 @@
                   <img
                     src="https://avataaars.io/?avatarStyle=Circle&topType=Hat&accessoriesType=Kurt&hatColor=Pink&facialHairType=BeardLight&facialHairColor=Brown&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=RaisedExcitedNatural&mouthType=Twinkle&skinColor=DarkBrown"
                   />
-                  <h2 class="font-medium title-font mt-4 text-2xl">
+                  <h2 class="font-medium title-font mt-4 text-2xl text-content-highlight">
                     {{ $static.metadata.author }}
                   </h2>
-                  <div class="w-24 h-1 bg-indigo-200 rounded mt-2 mb-4"></div>
+                  <div class="w-24 h-1 rounded mt-2 mb-4 bg-content-highlight"></div>
                 </div>
                 <p class="text-xl">
                   I build things for the web.
@@ -42,8 +42,8 @@
         </div>
       </section>
 
-      <section id="experience" class="h-screen bg-blue-gray-700">
-        <div class="container mx-auto h-full flex-center">
+      <section id="experience" class="h-screen bg-content-color">
+        <div class="container mx-auto h-full flex-center border-b-4">
           <div class="flex flex-wrap">
             <div class="flex relative py-10 md:w-2/3 mx-auto">
               <div
@@ -141,8 +141,8 @@
         </div>
       </section>
 
-      <section id="work" class="h-screen bg-blue-gray-600">
-        <div class="container mx-auto h-full flex-center">
+      <section id="work" class="h-screen bg-content-color">
+        <div class="container mx-auto h-full flex-center border-b-4">
           <div>
             <div class="flex flex-col text-center w-full mb-12">
               <h1 class="text-4xl font-medium title-font">
@@ -283,7 +283,7 @@
         </div>
       </section>
 
-      <section id="contact" class="h-screen bg-blue-gray-500">
+      <section id="contact" class="h-screen bg-content-color">
         <div class="container mx-auto h-full flex-center">
           <div>
             <div class="flex flex-col text-center w-full mb-4">
@@ -334,12 +334,12 @@
                 </div>
                 <div class="p-2 w-full pb-12 border-b-1">
                   <button
-                    class="flex mx-auto text-white bg-indigo-400 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                    class="flex mx-auto border-0 py-2 px-8 rounded text-lg text-white bg-indigo-400 focus:outline-none hover:bg-indigo-600"
                   >
                     Send
                   </button>
                 </div>
-                <Social />
+                <Social class="icon-lg"/>
               </div>
             </div>
           </div>

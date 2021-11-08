@@ -16,8 +16,16 @@ export default {
         xxl: "1400px",
       },
       colors: {
-        primary: "var(--color-primary)",
-        secondary: "var(--color-secondary)",
+        header: {
+          color: "var(--color-header-color)",
+          background: "var(--color-header-background)",
+          highlight: "var(--color-header-highlight)",
+        }, 
+        content: {
+          color: "var(--color-content-color)",
+          highlight: "var(--color-content-highlight)",
+        },
+        scenery: "var(--color-scenery)",
       },
     },
     container: {

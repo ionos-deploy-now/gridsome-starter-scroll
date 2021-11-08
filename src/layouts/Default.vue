@@ -1,40 +1,43 @@
 <template>
   <div class="layout">
-    <header class="sticky top-0 left-0 z-10 w-full">
-      <div
-        class="flex flex-rows items-center px-16 py-4 md:px-32 bg-light-blue-800"
-      >
-        <strong class="text-3xl text-light-300">
+    <header class="nav is-fixed sticky top-0 left-0 z-10 w-full">
+      <div class="flex-center flex-rows px-16 py-4 md:px-32 bg-header-background">
+        <div class="text-3xl text-header-color">
           <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-        </strong>
+        </div>
         <span class="flex-auto"></span>
-        <scrollactive ref="scrollactive" :offset="offset">
-          <ul class="flex flex-rows items-center space-x-4 text-2xl">
+        <scrollactive
+          ref="scrollactive"
+          :offset="offset"
+          highlight-first-item
+          >
+          <ul class="flex-center flex-rows space-x-4 text-2xl">
             <li>
-              <a href="#about" class="scrollactive-item">
+              <a href="#about" class="scrollactive-item text-header-color">
                 about
               </a>
             </li>
             <li>
-              <a href="#experience" class="scrollactive-item">
+              <a href="#experience" class="scrollactive-item text-header-color">
                 experience
               </a>
             </li>
             <li>
-              <a href="#work" class="scrollactive-item">
+              <a href="#work" class="scrollactive-item text-header-color">
                 work
               </a>
             </li>
             <li>
-              <a href="#contact" class="scrollactive-item">
+              <a href="#contact" class="scrollactive-item text-header-color">
                 contact
               </a>
             </li>
           </ul>
         </scrollactive>
+        <ToggleTheme class="pl-4" />
       </div>
     </header>
-    <main class="mx-auto px-16 md:px-32 bg-gray-50">
+    <main class="mx-auto px-16 md:px-32 bg-scenery">
       <slot />
     </main>
   </div>
@@ -48,16 +51,13 @@ query {
 }
 </static-query>
 
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-</style>
-
 <script>
+import ToggleTheme from "~/components/ToggleTheme"
+
 export default {
+  components: {
+    ToggleTheme,
+  },
   data: function() {
     return {
       offset: 84,
