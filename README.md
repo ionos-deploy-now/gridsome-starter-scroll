@@ -5,12 +5,17 @@
 ## Built with
 
 - [Gridsome 0.7](https://gridsome.org/)
-- [Windi CSS 3](https://windicss.org/) (top of Tailwind CSS v2)
+- [Windi CSS 3](https://windicss.org/)
 
 ## Features
 
-- [x] Click on nav items to scroll content area
-- [x] ...
+- [x] Click on navigation items to scroll to content section
+- [x] Highlight navigation items of visible content section 
+- [x] Use [global metadata](https://gridsome.org/docs/config/#metadata)
+- [] adjust mobile view
+- [] add markdown for content parts
+- [x] add light / dark mode
+- [] add favicon
 
 # Deployment
 
