@@ -1,5 +1,5 @@
 <template>
-  <button class="icon" @click="handleClick">
+  <button @click="handleClick">
     <ThemeLightDarkIcon class="icon-md" fillColor="var(--color-header-color)" />
   </button>
 </template>
