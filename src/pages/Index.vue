@@ -57,9 +57,7 @@
             v-for="edge in $page.allExperiences.edges"
             :key="edge.node.id"
           >
-            <div
-              class="flex-center w-18 md:w-28 h-full absolute inset-0"
-            >
+            <div class="flex-center w-18 md:w-28 h-full absolute inset-0">
               <div class="h-full w-1 bg-current pointer-events-none"></div>
             </div>
             <div
@@ -94,7 +92,9 @@
             <h1 class="font-medium text-base md:text-lg m-4">
               Some Things I’ve built
             </h1>
-            <p class="mx-auto leading-relaxed text-xs md:text-base lg:w-2/3 m-4">
+            <p
+              class="mx-auto leading-relaxed text-xs md:text-base lg:w-2/3 m-4"
+            >
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua.
@@ -107,7 +107,7 @@
               v-for="edge in $page.allProjects.edges"
               :key="edge.node.id"
             >
-              <div class="flex flex-row md:flex-col text-center">
+              <div class="flex flex-row md:flex-col">
                 <div
                   class="flex flex-col justify-start md:justify-center items-start md:items-center w-2/3 md:w-auto"
                 >
@@ -135,7 +135,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="w-auto">
+                <div class="ml-4 md:ml-0 w-auto">
                   <h2 class="font-medium text-base md:text-lg">
                     {{ edge.node.title }}
                   </h2>
