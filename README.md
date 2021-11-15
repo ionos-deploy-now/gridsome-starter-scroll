@@ -30,7 +30,7 @@ To install this theme manually you need to:
 git clone https://github.com/ionos-deploy-now/gridsome-starter-scroll
 ```
 
-1. Install dependencies
+2. Install dependencies
 
 Change your dir:
 
@@ -48,15 +48,19 @@ After all dependencies are installed you can run `yarn develop` to start the dev
 
 ## Configuring environmental variables
 
-You can easily individualize this template by setting your own environmental variables. Just rename `.env.example` to `.env`
-and fill out the data for following variables:
+You can easily individualize this template by setting your own environmental variables. Just add a file `.env`
+and fill out the data for following variables accordingly:
 
 ```dotenv
 SITE_NAME=
 SITE_DESCRIPTION=
-SITE_AUTHOR=
+SITE_URL=
+PATH_PREFIX=
+AUTHOR=
+GITHUB_URL=
+LINKEDIN_URL=
 ```
 
 ## More configuration settings
 
-You can edit other configuration values inside `gridsome.config.js`
+You can edit other configuration values inside gridsome.config.js`
