@@ -47,28 +47,6 @@ module.exports = {
           whitelistPatternsChildren: [/token$/],
         },
       },
-    },
-    {
-      use: "@gridsome/plugin-sitemap",
-      options: {
-        include: ["/", "/blog/**"],
-      },
-    },
-  ],
-  transformers: {
-    remark: {
-      plugins: [
-        [
-          "remark-autolink-headings",
-          {
-            behavior: "wrap",
-            linkProperties: {
-              ariaHidden: "true",
-              tabIndex: -1,
-            },
-          },
-        ],
-      ],
-    },
-  },
+    }
+  ]
 }
