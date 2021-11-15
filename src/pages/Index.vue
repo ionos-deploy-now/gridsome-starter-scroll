@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <div>
+      <!-- about us -->
       <section id="about" class="h-screen bg-content-color">
         <div class="container mx-auto h-full border-b-4">
           <div class="flex flex-col">
@@ -20,9 +21,7 @@
                       >
                         {{ $static.metadata.author }}
                       </h2>
-                      <div
-                        class="w-3/4 h-1 rounded my-4 w-full"
-                      ></div>
+                      <div class="w-3/4 h-1 rounded my-4 w-full"></div>
                       <p class="text-md md:text-xl">
                         I build things for the web.
                       </p>
@@ -50,102 +49,100 @@
           </div>
         </div>
       </section>
-
-      <section id="experience" class="h-screen bg-content-color">
-        <!-- TODO - fix mobile view -->
-        <div class="container mx-auto h-full flex-center border-b-4">
-          <div>
+      <!-- experiences -->
+      <section id="experiences" class="h-screen bg-content-color">
+        <div class="flex-center flex-col container mx-auto h-full border-b-4">
+          <div
+            class="flex relative py-10 md:w-2/3 mx-auto"
+            v-for="edge in $page.allExperiences.edges"
+            :key="edge.node.id"
+          >
             <div
-              class="flex relative py-10 md:w-2/3 mx-auto"
-              v-for="edge in $page.allExperiences.edges"
-              :key="edge.node.id"
+              class="w-18 md:w-28 h-full absolute inset-0 flex items-center justify-center"
+            >
+              <div class="h-full w-1 bg-current pointer-events-none"></div>
+            </div>
+            <div
+              class="flex-center flex-shrink-0 w-18 h-18 md:w-28 md:h-28 rounded-full bg-content-highlight z-1"
             >
               <div
-                class="w-12 md:w-24 h-full absolute inset-0 flex items-center justify-center"
+                class="flex flex-col text-center leading-none text-xs md:text-base font-light"
               >
+                <span>{{ edge.node.from }}</span>
+                <span>-</span>
+                <span>{{ edge.node.to }}</span>
+              </div>
+            </div>
+            <div class="flex flex-grow pl-4 md:pl-8 items-start">
+              <div class="flex-grow mt-0 md:mt-6 pl-2 md:pl-8">
+                <h2 class="font-medium text-xl md:text-2xl mb-1 ">
+                  {{ edge.node.company }}
+                </h2>
                 <div
-                  class="h-full w-1 bg-current pointer-events-none"
-                ></div>
-              </div>
-              <div
-                class="flex-shrink-0 w-12 md:w-24 h-24 rounded-full inline-flex items-center justify-center bg-amber-500 z-1"
-              >
-                <div class="flex flex-col text-center leading-none">
-                  <span>{{ edge.node.from }}</span>
-                  <span>-</span>
-                  <span>{{ edge.node.to }}</span>
-                </div>
-              </div>
-              <div
-                class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row"
-              >
-                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                  <h2 class="font-medium title-font mb-1 text-xl">
-                    {{ edge.node.company }}
-                  </h2>
-                  <div class="leading-relaxed" v-html="edge.node.content" />
-                </div>
+                  class="leading-relaxed text-sm md:text-base"
+                  v-html="edge.node.content"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section id="work" class="h-screen bg-content-color">
-        <!-- TODO - fix mobile view -->
-        <div class="container mx-auto h-full flex-center border-b-4">
-          <div>
-            <div class="flex flex-col text-center w-full mb-12">
-              <h1 class="text-4xl font-medium title-font">
-                Some Things I’ve built
-              </h1>
-              <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.
-              </p>
-            </div>
-
-            <div class="flex-center flex-wrap">
-              <div
-                class="p-4 md:w-1/2 lg:w-1/4"
-                v-for="edge in $page.allProjects.edges"
-                :key="edge.node.id"
-              >
-                <div class="h-full flex flex-col items-center text-center">
+      <!-- projects -->
+      <section id="projects" class="h-screen bg-content-color">
+        <div class="flex-center flex-col container mx-auto h-full border-b-4">
+          <div class="text-center w-full">
+            <h1 class="font-medium text-lg md:text-2xl">
+              Some Things I’ve built
+            </h1>
+            <p class="mx-auto leading-relaxed text-sm md:text-base lg:w-2/3">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua.
+            </p>
+          </div>
+          <!-- each project -->
+          <div class="flex-center flex-wrap">
+            <div
+              class="m-4 md:w-1/3 lg:w-1/4"
+              v-for="edge in $page.allProjects.edges"
+              :key="edge.node.id"
+            >
+              <div class="flex flex-row md:flex-col text-center">
+                <div
+                  class="flex flex-col justify-start md:justify-center items-start md:items-center w-2/3 md:w-auto"
+                >
                   <img
-                    alt="team"
-                    class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                    class="rounded-lg object-contain"
                     src="https://dummyimage.com/200x200"
+                    :alt="edge.node.title"
                   />
-                  <div class="w-full">
-                    <div class="flex-center">
-                      <div
-                        class="flex space-x-4 justify-center items-center mx-auto pb-4"
-                      >
-                        <a
-                          :href="edge.node.github"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Github"
-                        >
-                          <GithubIcon class="icon" />
-                        </a>
-                        <a
-                          :href="edge.node.url"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          :title="edge.node.title"
-                        >
-                          <OpenInNewIcon class="icon" />
-                        </a>
-                      </div>
-                    </div>
-                    <h2 class="title-font font-medium text-lg">
-                      {{ edge.node.title }}
-                    </h2>
-                    <div class="mb-4" v-html="edge.node.content" />
+                  <div class="flex-center my-2 mx-auto">
+                    <a
+                      :href="edge.node.github"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Github"
+                    >
+                      <GithubIcon class="icon" />
+                    </a>
+                    <a
+                      :href="edge.node.url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      :title="edge.node.title"
+                    >
+                      <OpenInNewIcon class="icon" />
+                    </a>
                   </div>
+                </div>
+                <div class="w-auto">
+                  <h2 class="font-medium text-base md:text-lg">
+                    {{ edge.node.title }}
+                  </h2>
+                  <div
+                    class="mx-auto leading-relaxed text-xs md:text-base"
+                    v-html="edge.node.content"
+                  />
                 </div>
               </div>
             </div>
@@ -157,7 +154,7 @@
         <div class="container mx-auto h-full flex-center">
           <div>
             <div class="flex flex-col text-center w-full mb-4">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">
+              <h1 class="sm:text-3xl text-2xl font-medium mb-4">
                 Get in touch with me
               </h1>
               <p class="lg:w-2/3 mx-auto leading-relaxed text-base pb-8">
@@ -209,7 +206,7 @@
                     Send
                   </button>
                 </div>
-                <Social class="icon-lg"/>
+                <Social class="icon-lg" />
               </div>
             </div>
           </div>

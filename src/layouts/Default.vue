@@ -33,18 +33,18 @@
             </li>
             <li>
               <a
-                href="#experience"
+                href="#experiences"
                 class="scrollactive-item text-header-color sm:inline-block sm:mt-0"
               >
-                experience
+                experiences
               </a>
             </li>
             <li>
               <a
-                href="#work"
+                href="#projects"
                 class="scrollactive-item text-header-color sm:inline-block sm:mt-0"
               >
-                work
+                projects
               </a>
             </li>
             <li>
