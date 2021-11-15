@@ -76,8 +76,8 @@ query {
 </static-query>
 
 <script>
-import ToggleTheme from "~/components/ToggleTheme"
 import MenuIcon from "vue-material-design-icons/Menu"
+import ToggleTheme from "~/components/ToggleTheme"
 
 export default {
   components: {
