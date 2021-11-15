@@ -5,7 +5,7 @@
     >
       <div class="flex flex-row items-center">
         <!-- mobile button only -->
-        <button class="md:hidden" @click="toggle">
+        <button class="md:hidden focus:outline-none" @click="toggle">
           <menu-icon class="icon-md" fillColor="var(--color-header-color)" />
         </button>
         <div
@@ -16,7 +16,7 @@
           }}</g-link>
         </div>
         <!-- mobile button only -->
-        <ToggleTheme class="md:hidden" />
+        <ToggleTheme class="md:hidden focus:outline-none" />
       </div>
       <div :class="open ? 'block' : 'hidden md:block'" class="flex-grow">
         <scrollactive ref="scrollactive" :offset="offset" highlight-first-item>
@@ -59,7 +59,7 @@
         </scrollactive>
       </div>
       <!-- desktop button only -->
-      <ToggleTheme class="hidden md:block" />
+      <ToggleTheme class="hidden md:block focus:outline-none" />
     </header>
     <main class="mx-auto px-0 md:px-24 bg-scenery">
       <slot />

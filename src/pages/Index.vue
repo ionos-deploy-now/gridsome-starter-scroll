@@ -22,7 +22,7 @@
                         {{ $static.metadata.author }}
                       </h2>
                       <div class="w-3/4 h-1 rounded my-4 w-full"></div>
-                      <p class="text-md md:text-xl">
+                      <p class="text-base md:text-lg">
                         I build things for the web.
                       </p>
                     </div>
@@ -30,9 +30,9 @@
                 </div>
               </div>
               <div
-                class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left"
+                class="sm:w-1/2 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left"
               >
-                <p class="leading-relaxed text-md md:text-xl mb-4">
+                <p class="leading-relaxed text-xs md:text-base mx-auto w-2/3">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor invidunt ut labore et dolore magna
                   aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -53,12 +53,12 @@
       <section id="experiences" class="h-screen bg-content-color">
         <div class="flex-center flex-col container mx-auto h-full border-b-4">
           <div
-            class="flex relative py-10 md:w-2/3 mx-auto"
+            class="flex relative py-6 md:py12 md:w-2/3 mx-auto"
             v-for="edge in $page.allExperiences.edges"
             :key="edge.node.id"
           >
             <div
-              class="w-18 md:w-28 h-full absolute inset-0 flex items-center justify-center"
+              class="flex-center w-18 md:w-28 h-full absolute inset-0"
             >
               <div class="h-full w-1 bg-current pointer-events-none"></div>
             </div>
@@ -66,7 +66,7 @@
               class="flex-center flex-shrink-0 w-18 h-18 md:w-28 md:h-28 rounded-full bg-content-highlight z-1"
             >
               <div
-                class="flex flex-col text-center leading-none text-xs md:text-base font-light"
+                class="flex flex-col text-center leading-none text-xs md:text-base"
               >
                 <span>{{ edge.node.from }}</span>
                 <span>-</span>
@@ -75,11 +75,11 @@
             </div>
             <div class="flex flex-grow pl-4 md:pl-8 items-start">
               <div class="flex-grow mt-0 md:mt-6 pl-2 md:pl-8">
-                <h2 class="font-medium text-xl md:text-2xl mb-1 ">
+                <h2 class="font-medium text-base md:text-lg mb-1 ">
                   {{ edge.node.company }}
                 </h2>
                 <div
-                  class="leading-relaxed text-sm md:text-base"
+                  class="leading-relaxed text-xs md:text-base"
                   v-html="edge.node.content"
                 />
               </div>
@@ -91,10 +91,10 @@
       <section id="projects" class="h-screen bg-content-color">
         <div class="flex-center flex-col container mx-auto h-full border-b-4">
           <div class="text-center w-full">
-            <h1 class="font-medium text-lg md:text-2xl">
+            <h1 class="font-medium text-base md:text-lg m-4">
               Some Things I’ve built
             </h1>
-            <p class="mx-auto leading-relaxed text-sm md:text-base lg:w-2/3">
+            <p class="mx-auto leading-relaxed text-xs md:text-base lg:w-2/3 m-4">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua.
@@ -116,14 +116,14 @@
                     src="https://dummyimage.com/200x200"
                     :alt="edge.node.title"
                   />
-                  <div class="flex-center my-2 mx-auto">
+                  <div class="flex-center space-x-2 md:space-x-4 m-4">
                     <a
                       :href="edge.node.github"
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Github"
                     >
-                      <GithubIcon class="icon" />
+                      <GithubIcon class="icon md:icon-md" />
                     </a>
                     <a
                       :href="edge.node.url"
@@ -131,7 +131,7 @@
                       rel="noopener noreferrer"
                       :title="edge.node.title"
                     >
-                      <OpenInNewIcon class="icon" />
+                      <OpenInNewIcon class="icon md:icon-md" />
                     </a>
                   </div>
                 </div>
@@ -154,59 +154,65 @@
         <div class="container mx-auto h-full flex-center">
           <div>
             <div class="flex flex-col text-center w-full mb-4">
-              <h1 class="sm:text-3xl text-2xl font-medium mb-4">
+              <h1 class="font-medium text-base md:text-lg mb-4">
                 Get in touch with me
               </h1>
-              <p class="lg:w-2/3 mx-auto leading-relaxed text-base pb-8">
+              <p
+                class="mx-auto leading-relaxed text-xs md:text-base lg:w-2/3 pb-8"
+              >
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua.
               </p>
             </div>
             <div class="lg:w-1/2 md:w-2/3 mx-auto">
-              <div class="flex flex-wrap -m-2">
+              <div class="flex flex-wrap">
                 <div class="p-2 w-1/2">
                   <div class="relative">
-                    <label for="name" class="leading-7 text-sm">Name</label>
+                    <label for="name" class="leading-7 text-xs md:text-base"
+                      >Name</label
+                    >
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-content-highlight focus:bg-white focus:ring-2 focus:border-content-highlight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
                 </div>
                 <div class="p-2 w-1/2">
                   <div class="relative">
-                    <label for="email" class="leading-7 text-sm">Email</label>
+                    <label for="email" class="leading-7 text-xs md:text-base"
+                      >Email</label
+                    >
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-content-highlight focus:bg-white focus:ring-2 focus:border-content-highlight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
                 </div>
-                <div class="p-2 w-full">
+                <div class="p-2 pb-4 w-full">
                   <div class="relative">
-                    <label for="message" class="leading-7 text-sm"
+                    <label for="message" class="leading-7 text-xs md:text-base"
                       >Message</label
                     >
                     <textarea
                       id="message"
                       name="message"
-                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-content-highlight focus:bg-white focus:ring-2 focus:border-content-highlight h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                     ></textarea>
                   </div>
                 </div>
-                <div class="p-2 w-full pb-12 border-b-1">
+                <div class="p-2 pb-4 w-full border-b-1">
                   <button
-                    class="flex mx-auto border-0 py-2 px-8 rounded text-lg text-white bg-content-highlight focus:outline-none hover:opacity-80"
+                    class="flex mx-auto border-0 py-2 px-8 rounded text-base md:text-lg text-white bg-content-highlight focus:outline-none hover:opacity-80"
                   >
                     Send
                   </button>
                 </div>
-                <Social class="icon-lg" />
+                <Social class="mt-4 w-full" />
               </div>
             </div>
           </div>

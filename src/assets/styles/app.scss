@@ -16,9 +16,9 @@
 html.dark {
   --color-header-background: #00616e;
   --color-header-color: #e3f3ff;
-  --color-header-highlight: #ef662e;
+  --color-header-highlight: #dd9023;
   --color-content-color: #0f839a;
-  --color-content-highlight: #ef662e;
+  --color-content-highlight: #dd9023;
   --color-scenery: #1897b3;
 }
 
@@ -117,11 +117,6 @@ blockquote {
   height: 1.25em;
   width: 1.25em;
 
-  & > .material-design-icon__svg {
-    height: 1.25em;
-    width: 1.25em;
-  }
-
   &.icon > .material-design-icon__svg {
     height: 1em;
     width: 1em;
@@ -135,23 +130,5 @@ blockquote {
   &.icon-lg > .material-design-icon__svg {
     height: 3em;
     width: 3em;
-  }
-}
-
-.bg-image {
-  @apply relative z-0;
-
-  &::before {
-    @apply z-0;
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("https://source.unsplash.com/WLUHO9A_xik");
-    opacity: 1;
-    pointer-events: none;
   }
 }

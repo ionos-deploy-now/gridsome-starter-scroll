@@ -1,22 +1,20 @@
 <template>
-  <aside class="flex space-x-4 justify-center items-center mx-auto my-4">
+  <aside class="flex-center space-x-2 md:space-x-4">
     <a
       :href="$static.metadata.github"
-      class="p-2"
       target="_blank"
       rel="noopener noreferrer"
       title="Github"
     >
-      <GithubIcon class="icon-lg" />
+      <GithubIcon class="icon-md md:icon-lg" />
     </a>
     <a
       :href="$static.metadata.linkedin"
-      class="p-2"
       target="_blank"
       rel="noopener noreferrer"
       title="Github"
     >
-      <LinkedinIcon class="icon-lg" />
+      <LinkedinIcon class="icon-md md:icon-lg" />
     </a>
   </aside>
 </template>
