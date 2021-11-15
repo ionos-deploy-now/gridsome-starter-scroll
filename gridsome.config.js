@@ -18,9 +18,25 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "blog/**/*.md",
-        typeName: "Post",
-        remark: {},
+        baseDir: './content/experiences/',
+        path: "*.md",
+        typeName: "Experiences", // for the sake of naming GraphQL - template missing
+        remark: {
+          externalLinksTarget: '_blank',
+          externalLinksRel: ['noopener', 'noreferrer'],
+        },
+      },
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        baseDir: './content/projects/',
+        path: "*.md",
+        typeName: "Projects", // for the sake of naming GraphQL - template missing
+        remark: {
+          externalLinksTarget: '_blank',
+          externalLinksRel: ['noopener', 'noreferrer'],
+        },
       },
     },
     {
