@@ -9,12 +9,12 @@
 
 ## Features
 
-- [x] Click on navigation items to scroll to content sections
-- [x] Highlight navigation items of visible content sections 
-- [x] Use [global metadata](https://gridsome.org/docs/config/#metadata)
-- [x] Use markdown for content parts
-- [x] Provide light / dark mode
-- [x] Provide mobile version
+- [x] Scroll content sections by clicking on nav items
+- [x] Highlight nav items 
+- [x] Make use of [global metadata](https://gridsome.org/docs/config/#metadata)
+- [x] Provides markdown for content parts
+- [x] Provides light / dark mode
+- [x] Provides responsible layout
 
 # Deployment
 
