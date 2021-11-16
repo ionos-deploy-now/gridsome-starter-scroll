@@ -17,11 +17,12 @@ export default {
       },
       colors: {
         header: {
-          color: "var(--color-header-color)",
           background: "var(--color-header-background)",
+          color: "var(--color-header-color)",
           highlight: "var(--color-header-highlight)",
         }, 
         content: {
+          background: "var(--color-content-background)",
           color: "var(--color-content-color)",
           highlight: "var(--color-content-highlight)",
         },
