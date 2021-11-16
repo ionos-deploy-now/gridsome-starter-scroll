@@ -116,7 +116,7 @@
                       rel="noopener noreferrer"
                       title="Github"
                     >
-                      <GithubIcon class="icon md:icon-md" />
+                      <GithubIcon class="icon" />
                     </a>
                     <a
                       :href="edge.node.url"
@@ -124,7 +124,7 @@
                       rel="noopener noreferrer"
                       :title="edge.node.title"
                     >
-                      <OpenInNewIcon class="icon md:icon-md" />
+                      <OpenInNewIcon class="icon" />
                     </a>
                   </div>
                 </div>
