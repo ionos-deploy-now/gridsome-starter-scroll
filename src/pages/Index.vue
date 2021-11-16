@@ -11,7 +11,7 @@
                 src="https://avataaars.io/?avatarStyle=Circle&topType=Hat&accessoriesType=Kurt&hatColor=Pink&facialHairType=BeardLight&facialHairColor=Brown&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=RaisedExcitedNatural&mouthType=Twinkle&skinColor=DarkBrown"
               />
               <div class="flex flex-col items-center">
-                <h2 class="font-medium title-font mt-4 text-xl md:text-2xl">
+                <h2 class="font-medium mt-4 text-xl md:text-2xl">
                   {{ $static.metadata.author }}
                 </h2>
                 <div class="w-3/4 h-1 rounded my-4 w-full"></div>
@@ -24,7 +24,9 @@
             <div
               class="flex-center border-t-1 md:border-t-0 border-l-0 md:border-l-1 w-auto md:w-2/3"
             >
-              <p class="leading-relaxed text-xs md:text-base mx-auto md:mx-4 my-4 md:my-0">
+              <p
+                class="leading-relaxed text-xs md:text-base mx-auto md:mx-4 my-4 md:my-0"
+              >
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -160,46 +162,45 @@
               <div class="flex flex-wrap">
                 <div class="p-2 w-1/2">
                   <div class="relative">
-                    <label for="name" class="leading-7 text-xs md:text-base"
-                      >Name</label
-                    >
+                    <label for="name" class="leading-7 text-xs md:text-base">
+                      Name
+                    </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-content-highlight focus:bg-white focus:ring-2 focus:border-content-highlight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      class="text-input bg-gray-200 dark:bg-gray-100"
                     />
                   </div>
                 </div>
                 <div class="p-2 w-1/2">
                   <div class="relative">
-                    <label for="email" class="leading-7 text-xs md:text-base"
-                      >Email</label
-                    >
+                    <label for="email" class="leading-7 text-xs md:text-base">
+                      Email
+                    </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-content-highlight focus:bg-white focus:ring-2 focus:border-content-highlight text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      class="text-input bg-gray-200 dark:bg-gray-100"
                     />
                   </div>
                 </div>
                 <div class="p-2 pb-4 w-full">
                   <div class="relative">
-                    <label for="message" class="leading-7 text-xs md:text-base"
-                      >Message</label
-                    >
+                    <label for="message" class="leading-7 text-xs md:text-base">
+                      Message
+                    </label>
                     <textarea
                       id="message"
                       name="message"
-                      class="w-full bg-gray-100 bg-opacity-50 rounded border border-white focus:border-content-highlight focus:bg-white focus:ring-2 focus:border-content-highlight h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                    ></textarea>
+                      class="text-input h-32 bg-gray-200 dark:bg-gray-100"
+                    >
+                    </textarea>
                   </div>
                 </div>
                 <div class="p-2 pb-4 w-full border-b-1">
-                  <button
-                    class="flex mx-auto border-0 py-2 px-8 rounded text-base md:text-lg text-white bg-content-highlight focus:outline-none hover:opacity-80"
-                  >
+                  <button class="btn bg-content-highlight">
                     Send
                   </button>
                 </div>

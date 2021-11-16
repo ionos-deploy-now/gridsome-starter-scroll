@@ -41,6 +41,7 @@ h2,
 h3,
 h4 {
   @apply text-light-300;
+  @apply text-content-color;
 }
 
 h1 {
@@ -134,4 +135,12 @@ blockquote {
     height: 3em;
     width: 3em;
   }
+}
+
+.text-input {
+  @apply w-full rounded focus:ring-2 text-base focus:outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out;
+}
+
+.btn {
+  @apply flex mx-auto py-2 px-8 border-0 rounded text-base md:text-lg focus:outline-none hover:opacity-80;
 }
