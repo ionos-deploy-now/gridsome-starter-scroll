@@ -2,30 +2,28 @@
   <Layout>
     <div class="bg-content-background">
       <!-- about us -->
-      <section id="about" class="h-screen">
+      <section id="about" class="h-screen mx-4">
         <div class="flex-center flex-col container h-full border-b-4">
           <div class="flex flex-col md:flex-row">
-            <div class="flex flex-row items-center w-2/3 md:w-1/3 my-4 md:my-0">
+            <div class="flex flex-col items-center w-2/3 md:w-1/3 my-4 md:my-0 w-auto">
               <img
-                class="w-1/2 md:w-auto"
+                class="w-2/5 md:w-auto"
                 src="https://avataaars.io/?avatarStyle=Circle&topType=Hat&accessoriesType=Kurt&hatColor=Pink&facialHairType=BeardLight&facialHairColor=Brown&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=RaisedExcitedNatural&mouthType=Twinkle&skinColor=DarkBrown"
               />
               <div class="flex flex-col items-center">
                 <h2 class="font-medium mt-4 text-xl md:text-2xl">
                   {{ $static.metadata.author }}
                 </h2>
-                <div class="w-3/4 h-1 rounded my-4 w-full"></div>
                 <p class="text-sm md:text-base">
                   I build things for the web.
                 </p>
               </div>
             </div>
-
             <div
               class="flex-center border-t-1 md:border-t-0 border-l-0 md:border-l-1 w-auto md:w-2/3"
             >
               <p
-                class="leading-relaxed text-xs md:text-base mx-auto md:mx-4 my-4 md:my-0"
+                class="leading-relaxed text-xs md:text-base mx-auto md:mx-12 my-4 md:my-0"
               >
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -43,7 +41,7 @@
         </div>
       </section>
       <!-- experiences -->
-      <section id="experiences" class="h-screen">
+      <section id="experiences" class="h-screen mx-4">
         <div class="flex-center flex-col container h-full border-b-4">
           <div
             class="flex relative py-6 md:py12 md:w-2/3 mx-auto"
@@ -79,7 +77,7 @@
         </div>
       </section>
       <!-- projects -->
-      <section id="projects" class="h-screen">
+      <section id="projects" class="h-screen mx-4">
         <div class="flex-center flex-col container h-full mx-auto border-b-4">
           <div class="text-center w-full">
             <h1 class="font-medium text-base md:text-lg m-4">
@@ -142,8 +140,8 @@
           </div>
         </div>
       </section>
-
-      <section id="contact" class="h-screen">
+      <!-- contact section -->
+      <section id="contact" class="h-screen mx-4">
         <div class="flex-center flex-col container h-full mx-auto">
           <div>
             <div class="flex flex-col text-center w-full mb-4">
