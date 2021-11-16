@@ -1,57 +1,48 @@
 <template>
   <Layout>
-    <div>
+    <div class="bg-content-background">
       <!-- about us -->
-      <section id="about" class="h-screen bg-content-color">
-        <div class="container mx-auto h-full border-b-4">
-          <div class="flex flex-col">
-            <div class="flex flex-col sm:flex-row md:mt-10">
-              <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                <div class="relative">
-                  <div
-                    class="flex flex-row md:flex-col items-center inset-0 w-full"
-                  >
-                    <img
-                      class="w-1/2 md:w-auto"
-                      src="https://avataaars.io/?avatarStyle=Circle&topType=Hat&accessoriesType=Kurt&hatColor=Pink&facialHairType=BeardLight&facialHairColor=Brown&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=RaisedExcitedNatural&mouthType=Twinkle&skinColor=DarkBrown"
-                    />
-                    <div class="flex flex-col items-center w-1/2 md:w-auto">
-                      <h2
-                        class="font-medium title-font mt-4 text-xl md:text-2xl"
-                      >
-                        {{ $static.metadata.author }}
-                      </h2>
-                      <div class="w-3/4 h-1 rounded my-4 w-full"></div>
-                      <p class="text-base md:text-lg">
-                        I build things for the web.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="sm:w-1/2 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left"
-              >
-                <p class="leading-relaxed text-xs md:text-base mx-auto w-2/3">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                  nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet.
+      <section id="about" class="h-screen">
+        <div class="flex-center flex-col container h-full border-b-4">
+          <div class="flex flex-col md:flex-row">
+            <div class="flex flex-row items-center w-2/3 md:w-1/3 my-4 md:my-0">
+              <img
+                class="w-1/2 md:w-auto"
+                src="https://avataaars.io/?avatarStyle=Circle&topType=Hat&accessoriesType=Kurt&hatColor=Pink&facialHairType=BeardLight&facialHairColor=Brown&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=RaisedExcitedNatural&mouthType=Twinkle&skinColor=DarkBrown"
+              />
+              <div class="flex flex-col items-center">
+                <h2 class="font-medium title-font mt-4 text-xl md:text-2xl">
+                  {{ $static.metadata.author }}
+                </h2>
+                <div class="w-3/4 h-1 rounded my-4 w-full"></div>
+                <p class="text-sm md:text-base">
+                  I build things for the web.
                 </p>
               </div>
+            </div>
+
+            <div
+              class="flex-center border-t-1 md:border-t-0 border-l-0 md:border-l-1 w-auto md:w-2/3"
+            >
+              <p class="leading-relaxed text-xs md:text-base mx-auto md:mx-4 my-4 md:my-0">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                sed diam voluptua. At vero eos et accusam et justo duo dolores
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                est Lorem ipsum dolor sit amet.
+              </p>
             </div>
           </div>
         </div>
       </section>
       <!-- experiences -->
-      <section id="experiences" class="h-screen bg-content-color">
-        <div class="flex-center flex-col container mx-auto h-full border-b-4">
+      <section id="experiences" class="h-screen">
+        <div class="flex-center flex-col container h-full border-b-4">
           <div
             class="flex relative py-6 md:py12 md:w-2/3 mx-auto"
             v-for="edge in $page.allExperiences.edges"
@@ -86,8 +77,8 @@
         </div>
       </section>
       <!-- projects -->
-      <section id="projects" class="h-screen bg-content-color">
-        <div class="flex-center flex-col container mx-auto h-full border-b-4">
+      <section id="projects" class="h-screen">
+        <div class="flex-center flex-col container h-full mx-auto border-b-4">
           <div class="text-center w-full">
             <h1 class="font-medium text-base md:text-lg m-4">
               Some Things I’ve built
@@ -150,8 +141,8 @@
         </div>
       </section>
 
-      <section id="contact" class="h-screen bg-content-color">
-        <div class="container mx-auto h-full flex-center">
+      <section id="contact" class="h-screen">
+        <div class="flex-center flex-col container h-full mx-auto">
           <div>
             <div class="flex flex-col text-center w-full mb-4">
               <h1 class="font-medium text-base md:text-lg mb-4">
