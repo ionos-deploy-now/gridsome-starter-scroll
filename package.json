@@ -1,7 +1,7 @@
 {
   "name": "gridsome-starter-scroll",
-  "version": "0.0.1",
-  "description": "Gridsome starter",
+  "version": "1.0.0",
+  "description": "A Gridsome starter using Windi CSS and Markdown to create a portfolio page",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ionos-deploy-now/gridsome-starter-scroll.git"
