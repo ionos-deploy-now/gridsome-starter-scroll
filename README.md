@@ -22,9 +22,7 @@
 
 ## Installation
 
-To install this theme manually you need to:
-
-1. Clone this repository by simply run:
+1. Clone this repository by run following command:
 
 ```bash
 git clone https://github.com/ionos-deploy-now/gridsome-starter-scroll
@@ -38,13 +36,13 @@ Change your dir:
 cd gridsome-starter-scroll
 ```
 
-Now, install all project dependencies using `yarn`:
+Now, install all project dependencies by using `yarn`:
 
 ```bash
 yarn install
 ```
 
-After all dependencies are installed you can run `yarn develop` to start the development server.
+Afterwards run `yarn develop` to start your local development server.
 
 ## Configuring environmental variables
 
