@@ -15,6 +15,9 @@
     "explore": "gridsome explore",
     "lint": "eslint --ext .ts,.js,.vue src"
   },
+  "engines": {
+    "node": "^14 <15"
+  },
   "dependencies": {
     "gridsome": "^0.7.23",
     "vue-material-design-icons": "^5.0.0",
